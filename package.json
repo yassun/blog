@@ -1,0 +1,13 @@
+{
+  "name": "blog",
+  "scripts": {
+    "deploy": "gh-pages -d public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yassun/blog.git"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
+  }
+}
