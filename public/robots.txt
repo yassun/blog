@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://yassun.github.io/blog/sitemap.xml
