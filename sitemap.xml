@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://yassun.github.io/blog/</loc>
+        <loc>https://blog.yasun.dev/</loc>
     </url>
     <url>
-        <loc>https://yassun.github.io/blog/about/</loc>
+        <loc>https://blog.yasun.dev/about/</loc>
     </url>
     <url>
-        <loc>https://yassun.github.io/blog/hello-world/</loc>
+        <loc>https://blog.yasun.dev/hello-world/</loc>
         <lastmod>2021-05-01T11:11:00+00:00</lastmod>
     </url>
     <url>
-        <loc>https://yassun.github.io/blog/moved-to-zola/</loc>
+        <loc>https://blog.yasun.dev/moved-to-zola/</loc>
         <lastmod>2021-12-28T11:20:00+00:00</lastmod>
     </url>
     <url>
-        <loc>https://yassun.github.io/blog/page/1/</loc>
+        <loc>https://blog.yasun.dev/page/1/</loc>
     </url>
     <url>
-        <loc>https://yassun.github.io/blog/tags/</loc>
+        <loc>https://blog.yasun.dev/tags/</loc>
     </url>
     <url>
-        <loc>https://yassun.github.io/blog/tags/rust/</loc>
+        <loc>https://blog.yasun.dev/tags/rust/</loc>
     </url>
     <url>
-        <loc>https://yassun.github.io/blog/tags/sample/</loc>
+        <loc>https://blog.yasun.dev/tags/sample/</loc>
     </url>
     <url>
-        <loc>https://yassun.github.io/blog/tags/zola/</loc>
+        <loc>https://blog.yasun.dev/tags/zola/</loc>
     </url>
 </urlset>
