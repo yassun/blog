@@ -8,6 +8,5 @@ https://yassun.github.io/blog/
 # How to build
 
 ```
-zola build
-npm run deploy
+make deploy
 ```
