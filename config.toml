@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://yassun.github.io/blog/"
+base_url = "https://blog.yasun.dev/"
 
 # Use the Tale-Zola theme
 theme = "tale-zola"
