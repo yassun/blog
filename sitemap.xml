@@ -11,6 +11,10 @@
         <lastmod>2021-05-01T11:11:00+00:00</lastmod>
     </url>
     <url>
+        <loc>https://yassun.github.io/blog/moved-to-zola/</loc>
+        <lastmod>2021-12-28T11:20:00+00:00</lastmod>
+    </url>
+    <url>
         <loc>https://yassun.github.io/blog/page/1/</loc>
     </url>
     <url>
@@ -21,5 +25,8 @@
     </url>
     <url>
         <loc>https://yassun.github.io/blog/tags/sample/</loc>
+    </url>
+    <url>
+        <loc>https://yassun.github.io/blog/tags/zola/</loc>
     </url>
 </urlset>

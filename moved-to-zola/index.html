@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+<title>ブログをZolaに移行した | DC5</title>
+
+
+
+<meta property="og:title" content="ブログをZolaに移行した">
+
+
+
+
+<meta property="og:locale" content="en_US">
+
+
+
+
+<link rel="canonical" href="https://yassun.github.io/blog/moved-to-zola/">
+<meta property="og:url" content="https://yassun.github.io/blog/moved-to-zola/">
+
+
+
+<meta property="og:site_name" content="DC5" />
+
+
+
+  <meta property="og:image" content="https://yassun.github.io/blog/tale.png">
+  
+  
+
+
+
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2021-12-28T11:20:00+00:00">
+
+
+
+  <link rel="prev" href="https://yassun.github.io/blog/hello-world/">
+
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image"">
+  <meta property="twitter:image" content="https://yassun.github.io/blog/tale.png">
+
+
+
+  <meta property="twitter:title" content="ブログをZolaに移行した">
+
+
+
+
+
+  
+
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+<script type="application/ld+json">
+{
+  "author": {
+    "@type":"Person",
+	  "name":"",
+  },
+  "description": "",
+  "url": "https://yassun.github.io/blog/moved-to-zola/",
+  "@context":"https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "ブログをZolaに移行した"
+  
+    
+    
+      "datePublished":"2021-12-28T11:20:00+00:00",
+    
+    "mainEntityOfPage":{
+      "@type":"WebPage",
+      "@id":"https://yassun.github.io/blog/moved-to-zola/"
+    },
+  
+}
+</script>
+
+  <link rel="stylesheet" href="https://yassun.github.io/blog/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="https://yassun.github.io/blog/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://yassun.github.io/blog/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://yassun.github.io/blog/assets/apple-touch-icon.png">
+
+  
+    <link type="application/atom+xml" rel="alternate" href="https://yassun.github.io/blog/atom.xml" title="DC5" />
+  
+
+  
+
+  
+  
+</head>
+
+<body>
+  
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="https://yassun.github.io/blog/">
+        <h2 class="nav-title">DC5</h2>
+      </a>
+      <ul>
+        
+          
+            <li><a href="https://yassun.github.io/blog">Posts</a></li>
+          
+            <li><a href="https://yassun.github.io/blog/tags">Tags</a></li>
+          
+            <li><a href="https://yassun.github.io/blog/about">About</a></li>
+          
+        
+      </ul>
+    </div>
+  </nav>
+  
+
+  <main>
+    
+  <div class="post">
+  	<div class="post-info">
+  		
+  		<span>on&nbsp;</span><time datetime="2021-12-28T11:20:00+00:00">December 28, 2021</time>
+  	</div>
+  	<h1 class="post-title">ブログをZolaに移行した</h1>
+  	<div class="post-line"></div>
+  	<p>ブログをそろそろ再開したいと思い、ついでなので環境も<a href="https://yasun.hatenablog.jp/">旧ブログ</a>から別のものに移行することにした。</p>
+<h1 id="bi-jiao">比較</h1>
+<p>移行に伴い昨今のSSG事情を調査した。
+<a href="https://jamstack.org/generators/">jamstack - Site Generators</a></p>
+<p><code>Hugo</code>、<code>Gatsby</code>、<code>Next.js</code>、<code>Hexo</code> あたりが人気 。<code>Jekyll</code>も根強い。</p>
+<p>調査中にRust製の<code>Zola</code>というものを見つけ、最近はRustを書くことが多いので使ってみることにした。</p>
+<h1 id="zola">Zola</h1>
+<ul>
+<li><a href="https://www.getzola.org/">Rust製SSG</a></li>
+<li>テンプレートエンジンに<a href="https://github.com/Keats/tera">Tera</a>を採用しており、こちらもRust製。
+<ul>
+<li>similar to Jinja2, Django templates, Liquid, and Twig.</li>
+</ul>
+</li>
+<li>コンテンツはCommonMarkで記述する。</li>
+</ul>
+<h1 id="install">Install</h1>
+<p>シングルバイナリなのでbrewでinstallできる。</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span> </span><span style="color:#bf616a;">$</span><span> brew install zola
+</span></code></pre>
+<h1 id="hello-world">Hello world</h1>
+<p><code>zola init ディレクトリ名</code> で初期構築を対話式で行うことができる。</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">zola</span><span> init blog
+</span><span style="color:#bf616a;">Welcome</span><span> to Zola!
+</span><span style="color:#bf616a;">Please</span><span> answer a few questions to get started quickly.
+</span><span style="color:#bf616a;">Any</span><span> choices made can be changed by modifying the `</span><span style="color:#bf616a;">config.toml</span><span>` file later.
+</span><span>&gt; What </span><span style="color:#bf616a;">is</span><span> the URL of your site? (https://example.com)</span><span style="color:#96b5b4;">:</span><span> https://yassun.github.io/blog/
+</span><span>&gt; Do </span><span style="color:#bf616a;">you</span><span> want to enable Sass compilation? </span><span style="color:#b48ead;">[</span><span>Y/n</span><span style="color:#b48ead;">]</span><span>: Y
+</span><span>&gt; Do </span><span style="color:#bf616a;">you</span><span> want to enable syntax highlighting? </span><span style="color:#b48ead;">[</span><span>y/N</span><span style="color:#b48ead;">]</span><span>: y
+</span><span>&gt; Do </span><span style="color:#bf616a;">you</span><span> want to build a search index of the content? </span><span style="color:#b48ead;">[</span><span>y/N</span><span style="color:#b48ead;">]</span><span>: y
+</span></code></pre>
+<p>作成直後のディレクトリ構成。config.toml以外は空の状態。</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">$</span><span> tree blog
+</span><span style="color:#bf616a;">blog
+</span><span style="color:#bf616a;">├──</span><span> config.toml
+</span><span style="color:#bf616a;">├──</span><span> content
+</span><span style="color:#bf616a;">├──</span><span> sass
+</span><span style="color:#bf616a;">├──</span><span> static
+</span><span style="color:#bf616a;">├──</span><span> templates
+</span><span style="color:#bf616a;">└──</span><span> themes
+</span><span>
+</span></code></pre>
+<p><code>zola serve</code> を実行するとローカル環境で表示を確認することができる。</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">$</span><span> zola serve                                                                                                                                                                                                                           Building site...
+</span><span style="color:#bf616a;">Checking</span><span> all internal links with anchors.
+</span><span>&gt; Successfully </span><span style="color:#bf616a;">checked</span><span> 0 internal link(s) </span><span style="color:#bf616a;">with</span><span> anchors.
+</span><span style="color:#bf616a;">-</span><span>&gt; Creating 0 pages (0 orphan) </span><span style="color:#bf616a;">and</span><span> 0 sections
+</span><span style="color:#bf616a;">Done</span><span> in 9ms.
+</span><span>
+</span><span style="color:#bf616a;">Web</span><span> server is available at http://127.0.0.1:1111
+</span></code></pre>
+<h1 id="hosting">Hosting</h1>
+<p>試しにGitHub Pagesにホスティングしてみる。</p>
+<p><code>zola build</code>を実行するとhtmlを<code>public</code>配下に生成できるので
+こちらを<code>gh-pages -d public</code>等でgh-pagesにpushすると<code>https://[ユーザ名].github.io/[リポジトリ名]/</code>にホスティングされる。</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">$</span><span> zola build
+</span><span style="color:#bf616a;">Checking</span><span> all internal links with anchors.
+</span><span>&gt; Successfully </span><span style="color:#bf616a;">checked</span><span> 0 internal link(s) </span><span style="color:#bf616a;">with</span><span> anchors.
+</span><span style="color:#bf616a;">-</span><span>&gt; Creating 0 pages (0 orphan) </span><span style="color:#bf616a;">and</span><span> 0 sections
+</span><span style="color:#bf616a;">Done</span><span> in 13ms.
+</span></code></pre>
+<p>CI経由でのデプロイも簡単にできる。<a href="https://www.getzola.org/documentation/deployment/github-pages/">deployment</a></p>
+<h1 id="themes">themes</h1>
+<p>初期状態では味気ないのでテーマをいれてみる。</p>
+<p><a href="https://www.getzola.org/documentation/themes/installing-and-using-themes/">installing-and-using-themes</a></p>
+<p><a href="https://www.getzola.org/themes/">ここ</a>から好きなテーマを選択し、該当のリポジトリを<code>thems</code>ディレクトリ配下にcloneもしくは<code>submodule add</code> で追加する。</p>
+<p>追加後に<code>config.toml</code>に<code>theme = &quot;テーマ名&quot;</code>の記述をすると有効になる。</p>
+<p>今回は<a href="https://www.getzola.org/themes/tale-zola/">tale-zola</a>を選択した。</p>
+<h1 id="content">Content</h1>
+<p>実際にこの記事を書いてみる。
+<a href="https://www.getzola.org/documentation/content/overview/">content/overview</a></p>
+<p><code>content/</code>配下に置かれたマークダウンがそのまま記事として生成され、URLリソース等もファイル名とディレクトリに一致する。</p>
+<p>表示形式については <code>templates/</code>配下のファイルでカスタマイズ可能。
+<a href="https://www.getzola.org/documentation/templates/overview/">templates/overview</a></p>
+<p>テンプレートの中身は<a href="https://tera.netlify.app/">Tera</a>を使って記述することができる。</p>
+<h1 id="kokomadenosuo-gan">ここまでの所感</h1>
+<h2 id="pros">Pros</h2>
+<ul>
+<li>シングルバイナリなので依存モジュール等のパッケージ管理が不要。</li>
+<li>コマンドがシンプルで覚える事が少なくデプロイまですぐに行うことができる。</li>
+<li>ビルドが早い。ビルト時のエラーも親切。</li>
+</ul>
+<h2 id="cons">Cons</h2>
+<ul>
+<li>公式テーマが少ない。
+<ul>
+<li>その他のSSGに比べると圧倒的に少ない。</li>
+</ul>
+</li>
+</ul>
+<p>デザインに関するこだわりも少なく、なるべくシンプルに運用したいと思っていたので自分の要望にはかなりマッチしていた。</p>
+<p>このまましばらく運用を続けて行こうと思う。</p>
+
+  </div>
+
+	
+
+  <div class="pagination">
+  	
+		<a href="#" class="top">Top</a>
+		<a href="https://yassun.github.io/blog/hello-world/" class="right arrow">&#8594;</a>
+  </div>
+
+  </main>
+
+  
+  <footer>
+    <span>&copy; <time datetime="2021-12-28T11:41:37.403391+09:00">2021</time> . Made with <a href="https://www.getzola.org">Zola</a> with <a href="https://github.com/aaranxu/tale-zola">Tala-Zola</a> theme.</span>
+  </footer>
+  
+</body>
+</html>
