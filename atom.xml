@@ -74,7 +74,7 @@
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Done&lt;&#x2F;span&gt;&lt;span&gt; in 13ms.
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;CI経由でのデプロイも簡単にできる。&lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;github-pages&#x2F;&quot;&gt;deployment&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;themes&quot;&gt;themes&lt;&#x2F;h1&gt;
+&lt;h1 id=&quot;themes&quot;&gt;Themes&lt;&#x2F;h1&gt;
 &lt;p&gt;初期状態では味気ないのでテーマをいれてみる。&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;themes&#x2F;installing-and-using-themes&#x2F;&quot;&gt;installing-and-using-themes&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;themes&#x2F;&quot;&gt;ここ&lt;&#x2F;a&gt;から好きなテーマを選択し、該当のリポジトリを&lt;code&gt;thems&lt;&#x2F;code&gt;ディレクトリ配下にcloneもしくは&lt;code&gt;submodule add&lt;&#x2F;code&gt; で追加する。&lt;&#x2F;p&gt;
@@ -87,7 +87,7 @@
 &lt;p&gt;表示形式については &lt;code&gt;templates&#x2F;&lt;&#x2F;code&gt;配下のファイルでカスタマイズ可能。
 &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;overview&#x2F;&quot;&gt;templates&#x2F;overview&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;テンプレートの中身は&lt;a href=&quot;https:&#x2F;&#x2F;tera.netlify.app&#x2F;&quot;&gt;Tera&lt;&#x2F;a&gt;を使って記述することができる。&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;kokomadenosuo-gan&quot;&gt;ここまでの所感&lt;&#x2F;h1&gt;
+&lt;h1 id=&quot;suo-gan&quot;&gt;所感&lt;&#x2F;h1&gt;
 &lt;h2 id=&quot;pros&quot;&gt;Pros&lt;&#x2F;h2&gt;
 &lt;ul&gt;
 &lt;li&gt;シングルバイナリなので依存モジュール等のパッケージ管理が不要。&lt;&#x2F;li&gt;
