@@ -85,7 +85,7 @@ Done in 13ms.
 
 CI経由でのデプロイも簡単にできる。[deployment](https://www.getzola.org/documentation/deployment/github-pages/)
 
-# themes
+# Themes
 初期状態では味気ないのでテーマをいれてみる。
 
 [installing-and-using-themes](https://www.getzola.org/documentation/themes/installing-and-using-themes/)
@@ -108,7 +108,7 @@ CI経由でのデプロイも簡単にできる。[deployment](https://www.getzo
 
 テンプレートの中身は[Tera](https://tera.netlify.app/)を使って記述することができる。
 
-# ここまでの所感
+# 所感
 ## Pros
 - シングルバイナリなので依存モジュール等のパッケージ管理が不要。
 - コマンドがシンプルで覚える事が少なくデプロイまですぐに行うことができる。
