@@ -149,7 +149,7 @@
   	<div class="post-line"></div>
   	<p>今年から筋トレを開始し、知人に勧められた<code>Withings Body</code>を購入した。</p>
 <h1 id="withings-body">Withings Body</h1>
-<p>https://www.withings.com/jp/ja/scales</p>
+<p><a href="https://www.withings.com/jp/ja/scales">https://www.withings.com/jp/ja/scales</a></p>
 <ul>
 <li>WiFi/Bluetoothに接続できるスマート体重計。</li>
 <li>専用アプリをインストールすることで体重や体脂肪等のダッシュボードを見ることができる。</li>
@@ -158,7 +158,7 @@
 <h1 id="apidedekirukoto">APIでできること</h1>
 <p>計測した結果は殆どアクセスできる。
 睡眠パッドやウォッチのAPIも含まれているため色々なエントリポイントがある。
-https://developer.withings.com/api-reference</p>
+<a href="https://developer.withings.com/api-reference">api-reference</a></p>
 <p>体重計の情報の取得に必要なAPIは以下。</p>
 <ul>
 <li><a href="https://developer.withings.com/api-reference#tag/oauth2">OAuth2</a></li>
@@ -166,22 +166,22 @@ https://developer.withings.com/api-reference</p>
 </ul>
 <h2 id="api-keytosecretnoqu-de">API KeyとSecretの取得</h2>
 <p>API利用のためには以下からアプリを作成してAPI KeyとSecretの取得する必要がある。
-https://oauth.withings.com/</p>
+<a href="https://oauth.withings.com/">https://oauth.withings.com/</a></p>
 <h2 id="authentication-codenoqu-de">Authentication Codeの取得</h2>
-<p>https://developer.withings.com/api-reference#operation/oauth2-authorize</p>
+<p><a href="https://developer.withings.com/api-reference#operation/oauth2-authorize">oauth2-authorize</a></p>
 <p>以下URLにGetでアクセスすることで<code>authentication code</code>を取得できる。</p>
 <pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>https://account.withings.com/oauth2_user/authorize2?response_type=code&amp;client_id=`your_client_id`&amp;redirect_uri=https%3A%2F%2Flocalhost&amp;scope=user.info%2Cuser.metrics&amp;state=demo
 </span></code></pre>
 <p>今回はCLIから利用を想定しているので<code>redirect_uri</code>にlocalhostに指定してリダイレクトされたURLパラメータから<code>code</code>を取得した。</p>
 <p><code>code</code>の有効期限は30秒しかないので注意。</p>
 <h2 id="access-tokennoqu-de">Access Tokenの取得</h2>
-<p>https://oauth.withings.com/api-reference#operation/oauth2-getaccesstoken</p>
+<p><a href="https://oauth.withings.com/api-reference#operation/oauth2-getaccesstoken">oauth2-getaccesstoken</a></p>
 <p>以下URLにPOSTでアクセスすることで<code>Access Token</code>を取得できる。</p>
 <pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>curl --data &quot;action=requesttoken&amp;grant_type=authorization_code&amp;client_id=`your_client_id`&amp;client_secret=`your_client_secret`&amp;code=`上記で取得したauthentication_code`&amp;redirect_uri=http://localhost/&quot; &#39;https://wbsapi.withings.net/v2/oauth2&#39;
 </span></code></pre>
 <p><code>action</code>と<code>authorization_code</code>は固定の文字列が入る。</p>
 <h2 id="measureqing-bao-noqu-de">Measure情報の取得</h2>
-<p>https://developer.withings.com/api-reference#operation/measure-getmeas</p>
+<p><a href="https://developer.withings.com/api-reference#operation/measure-getmeas">measure-getmeas</a></p>
 <p>以下URLにPOSTでアクセスすることで<code>Measure情報</code>を取得できる。</p>
 <pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>curl --header &quot;Authorization: Bearer `上記で取得したAccess Token`&quot; --data &quot;action=getmeas&amp;meastype=1&amp;category=1&quot; &#39;https://wbsapi.withings.net/measure&#39;
 </span></code></pre>
@@ -196,7 +196,7 @@ https://oauth.withings.com/</p>
 </span></code></pre>
 <h1 id="rustdeapinokuraiantoraiburariwozuo-tuta">RustでAPIのクライアントライブラリを作った</h1>
 <p>結構な頻度でトークンの再取得/リフレッシュを行う必要があり大変だったのでRustでAPIクライアントを作った。
-https://github.com/yassun/withings-api</p>
+<a href="https://github.com/yassun/withings-api">https://github.com/yassun/withings-api</a></p>
 <p>こちらを使って定期的に<code>Getmeas</code>を呼ぶことでSlackやLineに最新の測定結果を通知することが可能になった。</p>
 
   </div>
@@ -213,7 +213,7 @@ https://github.com/yassun/withings-api</p>
 
   
   <footer>
-    <span>&copy; <time datetime="2022-02-20T09:24:18.185339+09:00">2021-2022</time> . Made with <a href="https://www.getzola.org">Zola</a> with <a href="https://github.com/aaranxu/tale-zola">Tala-Zola</a> theme.</span>
+    <span>&copy; <time datetime="2022-02-20T09:30:49.886920+09:00">2021-2022</time> . Made with <a href="https://www.getzola.org">Zola</a> with <a href="https://github.com/aaranxu/tale-zola">Tala-Zola</a> theme.</span>
   </footer>
   
 </body>

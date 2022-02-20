@@ -14,7 +14,7 @@
 		<id>https://blog.yasun.dev/withings-api/</id>
 		<content type="html">&lt;p&gt;今年から筋トレを開始し、知人に勧められた&lt;code&gt;Withings Body&lt;&#x2F;code&gt;を購入した。&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;withings-body&quot;&gt;Withings Body&lt;&#x2F;h1&gt;
-&lt;p&gt;https:&#x2F;&#x2F;www.withings.com&#x2F;jp&#x2F;ja&#x2F;scales&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.withings.com&#x2F;jp&#x2F;ja&#x2F;scales&quot;&gt;https:&#x2F;&#x2F;www.withings.com&#x2F;jp&#x2F;ja&#x2F;scales&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;WiFi&#x2F;Bluetoothに接続できるスマート体重計。&lt;&#x2F;li&gt;
 &lt;li&gt;専用アプリをインストールすることで体重や体脂肪等のダッシュボードを見ることができる。&lt;&#x2F;li&gt;
@@ -23,7 +23,7 @@
 &lt;h1 id=&quot;apidedekirukoto&quot;&gt;APIでできること&lt;&#x2F;h1&gt;
 &lt;p&gt;計測した結果は殆どアクセスできる。
 睡眠パッドやウォッチのAPIも含まれているため色々なエントリポイントがある。
-https:&#x2F;&#x2F;developer.withings.com&#x2F;api-reference&lt;&#x2F;p&gt;
+&lt;a href=&quot;https:&#x2F;&#x2F;developer.withings.com&#x2F;api-reference&quot;&gt;api-reference&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;体重計の情報の取得に必要なAPIは以下。&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;developer.withings.com&#x2F;api-reference#tag&#x2F;oauth2&quot;&gt;OAuth2&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
@@ -31,22 +31,22 @@ https:&#x2F;&#x2F;developer.withings.com&#x2F;api-reference&lt;&#x2F;p&gt;
 &lt;&#x2F;ul&gt;
 &lt;h2 id=&quot;api-keytosecretnoqu-de&quot;&gt;API KeyとSecretの取得&lt;&#x2F;h2&gt;
 &lt;p&gt;API利用のためには以下からアプリを作成してAPI KeyとSecretの取得する必要がある。
-https:&#x2F;&#x2F;oauth.withings.com&#x2F;&lt;&#x2F;p&gt;
+&lt;a href=&quot;https:&#x2F;&#x2F;oauth.withings.com&#x2F;&quot;&gt;https:&#x2F;&#x2F;oauth.withings.com&#x2F;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;authentication-codenoqu-de&quot;&gt;Authentication Codeの取得&lt;&#x2F;h2&gt;
-&lt;p&gt;https:&#x2F;&#x2F;developer.withings.com&#x2F;api-reference#operation&#x2F;oauth2-authorize&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;developer.withings.com&#x2F;api-reference#operation&#x2F;oauth2-authorize&quot;&gt;oauth2-authorize&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;以下URLにGetでアクセスすることで&lt;code&gt;authentication code&lt;&#x2F;code&gt;を取得できる。&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#eff1f5;color:#4f5b66;&quot;&gt;&lt;code&gt;&lt;span&gt;https:&#x2F;&#x2F;account.withings.com&#x2F;oauth2_user&#x2F;authorize2?response_type=code&amp;amp;client_id=`your_client_id`&amp;amp;redirect_uri=https%3A%2F%2Flocalhost&amp;amp;scope=user.info%2Cuser.metrics&amp;amp;state=demo
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;今回はCLIから利用を想定しているので&lt;code&gt;redirect_uri&lt;&#x2F;code&gt;にlocalhostに指定してリダイレクトされたURLパラメータから&lt;code&gt;code&lt;&#x2F;code&gt;を取得した。&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;code&gt;code&lt;&#x2F;code&gt;の有効期限は30秒しかないので注意。&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;access-tokennoqu-de&quot;&gt;Access Tokenの取得&lt;&#x2F;h2&gt;
-&lt;p&gt;https:&#x2F;&#x2F;oauth.withings.com&#x2F;api-reference#operation&#x2F;oauth2-getaccesstoken&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;oauth.withings.com&#x2F;api-reference#operation&#x2F;oauth2-getaccesstoken&quot;&gt;oauth2-getaccesstoken&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;以下URLにPOSTでアクセスすることで&lt;code&gt;Access Token&lt;&#x2F;code&gt;を取得できる。&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#eff1f5;color:#4f5b66;&quot;&gt;&lt;code&gt;&lt;span&gt;curl --data &amp;quot;action=requesttoken&amp;amp;grant_type=authorization_code&amp;amp;client_id=`your_client_id`&amp;amp;client_secret=`your_client_secret`&amp;amp;code=`上記で取得したauthentication_code`&amp;amp;redirect_uri=http:&#x2F;&#x2F;localhost&#x2F;&amp;quot; &amp;#39;https:&#x2F;&#x2F;wbsapi.withings.net&#x2F;v2&#x2F;oauth2&amp;#39;
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;&lt;code&gt;action&lt;&#x2F;code&gt;と&lt;code&gt;authorization_code&lt;&#x2F;code&gt;は固定の文字列が入る。&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;measureqing-bao-noqu-de&quot;&gt;Measure情報の取得&lt;&#x2F;h2&gt;
-&lt;p&gt;https:&#x2F;&#x2F;developer.withings.com&#x2F;api-reference#operation&#x2F;measure-getmeas&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;developer.withings.com&#x2F;api-reference#operation&#x2F;measure-getmeas&quot;&gt;measure-getmeas&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;以下URLにPOSTでアクセスすることで&lt;code&gt;Measure情報&lt;&#x2F;code&gt;を取得できる。&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#eff1f5;color:#4f5b66;&quot;&gt;&lt;code&gt;&lt;span&gt;curl --header &amp;quot;Authorization: Bearer `上記で取得したAccess Token`&amp;quot; --data &amp;quot;action=getmeas&amp;amp;meastype=1&amp;amp;category=1&amp;quot; &amp;#39;https:&#x2F;&#x2F;wbsapi.withings.net&#x2F;measure&amp;#39;
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
@@ -61,7 +61,7 @@ https:&#x2F;&#x2F;oauth.withings.com&#x2F;&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h1 id=&quot;rustdeapinokuraiantoraiburariwozuo-tuta&quot;&gt;RustでAPIのクライアントライブラリを作った&lt;&#x2F;h1&gt;
 &lt;p&gt;結構な頻度でトークンの再取得&#x2F;リフレッシュを行う必要があり大変だったのでRustでAPIクライアントを作った。
-https:&#x2F;&#x2F;github.com&#x2F;yassun&#x2F;withings-api&lt;&#x2F;p&gt;
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;yassun&#x2F;withings-api&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;yassun&#x2F;withings-api&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;こちらを使って定期的に&lt;code&gt;Getmeas&lt;&#x2F;code&gt;を呼ぶことでSlackやLineに最新の測定結果を通知することが可能になった。&lt;&#x2F;p&gt;
 </content>
 	</entry>
