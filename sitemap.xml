@@ -27,6 +27,13 @@
         <loc>https://blog.yasun.dev/tags/sample/</loc>
     </url>
     <url>
+        <loc>https://blog.yasun.dev/tags/withings/</loc>
+    </url>
+    <url>
         <loc>https://blog.yasun.dev/tags/zola/</loc>
+    </url>
+    <url>
+        <loc>https://blog.yasun.dev/withings-api/</loc>
+        <lastmod>2022-02-20T12:00:00+00:00</lastmod>
     </url>
 </urlset>
