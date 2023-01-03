@@ -10,7 +10,7 @@
 		<title>Withings Bodyの計測結果を取得した</title>
 		<published>2022-02-20T12:00:00+00:00</published>
 		<updated>2022-02-20T12:00:00+00:00</updated>
-		<link href="https://blog.yasun.dev/withings-api/" type="text/html"/>
+		<link rel="alternate" href="https://blog.yasun.dev/withings-api/" type="text/html"/>
 		<id>https://blog.yasun.dev/withings-api/</id>
 		<content type="html">&lt;p&gt;今年から筋トレを開始し、知人に勧められた&lt;code&gt;Withings Body&lt;&#x2F;code&gt;を購入した。&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;withings-body&quot;&gt;Withings Body&lt;&#x2F;h1&gt;
@@ -69,7 +69,7 @@
 		<title>ブログをZolaに移行した</title>
 		<published>2021-12-28T11:20:00+00:00</published>
 		<updated>2021-12-28T11:20:00+00:00</updated>
-		<link href="https://blog.yasun.dev/moved-to-zola/" type="text/html"/>
+		<link rel="alternate" href="https://blog.yasun.dev/moved-to-zola/" type="text/html"/>
 		<id>https://blog.yasun.dev/moved-to-zola/</id>
 		<content type="html">&lt;p&gt;ブログをそろそろ再開したいと思い、ついでなので環境も&lt;a href=&quot;https:&#x2F;&#x2F;yasun.hatenablog.jp&#x2F;&quot;&gt;旧ブログ&lt;&#x2F;a&gt;から別のものに移行することにした。&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;bi-jiao&quot;&gt;比較&lt;&#x2F;h1&gt;
@@ -169,7 +169,7 @@
 		<title>Hello World</title>
 		<published>2021-05-01T11:11:00+00:00</published>
 		<updated>2021-05-01T11:11:00+00:00</updated>
-		<link href="https://blog.yasun.dev/hello-world/" type="text/html"/>
+		<link rel="alternate" href="https://blog.yasun.dev/hello-world/" type="text/html"/>
 		<id>https://blog.yasun.dev/hello-world/</id>
 		<content type="html">&lt;p&gt;This is the source code of the traditional &lt;em&gt;Hello World&lt;&#x2F;em&gt; program.&lt;&#x2F;p&gt;
 &lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#eff1f5;color:#4f5b66;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#a7adba;&quot;&gt;&#x2F;&#x2F; This is a comment, and is ignored by the compiler

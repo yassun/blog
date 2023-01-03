@@ -10,7 +10,7 @@
 		<title>Withings Bodyの計測結果を取得した</title>
 		<published>2022-02-20T12:00:00+00:00</published>
 		<updated>2022-02-20T12:00:00+00:00</updated>
-		<link href="https://blog.yasun.dev/withings-api/" type="text/html"/>
+		<link rel="alternate" href="https://blog.yasun.dev/withings-api/" type="text/html"/>
 		<id>https://blog.yasun.dev/withings-api/</id>
 		<content type="html">&lt;p&gt;今年から筋トレを開始し、知人に勧められた&lt;code&gt;Withings Body&lt;&#x2F;code&gt;を購入した。&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;withings-body&quot;&gt;Withings Body&lt;&#x2F;h1&gt;

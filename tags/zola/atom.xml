@@ -10,7 +10,7 @@
 		<title>ブログをZolaに移行した</title>
 		<published>2021-12-28T11:20:00+00:00</published>
 		<updated>2021-12-28T11:20:00+00:00</updated>
-		<link href="https://blog.yasun.dev/moved-to-zola/" type="text/html"/>
+		<link rel="alternate" href="https://blog.yasun.dev/moved-to-zola/" type="text/html"/>
 		<id>https://blog.yasun.dev/moved-to-zola/</id>
 		<content type="html">&lt;p&gt;ブログをそろそろ再開したいと思い、ついでなので環境も&lt;a href=&quot;https:&#x2F;&#x2F;yasun.hatenablog.jp&#x2F;&quot;&gt;旧ブログ&lt;&#x2F;a&gt;から別のものに移行することにした。&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;bi-jiao&quot;&gt;比較&lt;&#x2F;h1&gt;

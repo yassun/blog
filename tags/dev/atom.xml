@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title>DC5 - dev</title>
+	<link href="https://blog.yasun.dev/tags/dev/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://blog.yasun.dev/"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2023-01-04T12:00:00+00:00</updated>
+	<id>https://blog.yasun.dev/tags/dev/atom.xml</id>
+	<entry xml:lang="en">
+		<title>開発用にNUCを買った</title>
+		<published>2023-01-04T12:00:00+00:00</published>
+		<updated>2023-01-04T12:00:00+00:00</updated>
+		<link rel="alternate" href="https://blog.yasun.dev/setup-nuc/" type="text/html"/>
+		<id>https://blog.yasun.dev/setup-nuc/</id>
+		<content type="html">&lt;p&gt;去年からインテルのミニPC（NUC）を開発機としてメイン使いしている。&lt;&#x2F;p&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;blog.yasun.dev&#x2F;nuc&#x2F;1.jpg&quot; width=&quot;300&quot;&gt;
+&lt;p&gt;Docker for Macの速度や、M1Macに変えてから諸々のDockerイメージのサポートが遅れがちだったりと不便を感じていた際に、
+同じ会社の人がやっていた構成が快適そうだったので参考にさせてもらった。&lt;&#x2F;p&gt;
+&lt;p&gt;基本はM1MacからSSH接続して開発している。&lt;&#x2F;p&gt;
+&lt;p&gt;最近はvimからVS Codeに移行したのでExtentionの&lt;code&gt;Remote - SSH&lt;&#x2F;code&gt;を使ってコードを編集し、
+Docker等で立ち上げたローカル環境に接続する場合はdnsmasqを使って名前解決をしている。&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;gou-ru-sitanuc&quot;&gt;購入したNUC&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;サイズ、スペックを検討して「NUC11TNKi5」を購入した。&lt;&#x2F;li&gt;
+&lt;li&gt;NUC11TNKi5についてはこちらの記事でとてもわかりやすく解説されている。
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;pc.watch.impress.co.jp&#x2F;docs&#x2F;column&#x2F;hothot&#x2F;1317129.html&quot;&gt;手のひらサイズでリッチな超小型PC「NUC 11 Pro」。第11世代Core i5搭載モデルをレビュー&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;yong-yi-sitamono&quot;&gt;用意したもの&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;usbmemori&quot;&gt;USBメモリ&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;ブート用に2G以上のUSBメモリが必要。&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;memori&quot;&gt;メモリ&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;対応規格: DDR4 SO-DIMM×2(DDR4-3200対応、最大64GB)&lt;&#x2F;li&gt;
+&lt;li&gt;CrucialのノートPC用メモリを購入した
+&lt;ul&gt;
+&lt;li&gt;https:&#x2F;&#x2F;www.amazon.co.jp&#x2F;dp&#x2F;B07ZLC7VNH&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;ssd&quot;&gt;SSD&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;対応規格: M.2(2280、PCI Express 4.0 x4)、M.2(2242、SATA)&lt;&#x2F;li&gt;
+&lt;li&gt;NUC11TNKi5はM.2対応SSDのみを利用可能なので注意が必要
+&lt;ul&gt;
+&lt;li&gt;https:&#x2F;&#x2F;www.amazon.co.jp&#x2F;dp&#x2F;B08NDH38D7&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;osnosetutoatupu&quot;&gt;OSのセットアップ&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;butousbnozuo-cheng&quot;&gt;ブートUSBの作成&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;手順はubuntuの公式ページを参照
+&lt;ul&gt;
+&lt;li&gt;https:&#x2F;&#x2F;tutorials.ubuntu.com&#x2F;tutorial&#x2F;tutorial-create-a-usb-stick-on-macos#0&lt;&#x2F;li&gt;
+&lt;li&gt;基本的な手順は以下
+&lt;ul&gt;
+&lt;li&gt;USBメモリを初期化&lt;&#x2F;li&gt;
+&lt;li&gt;利用するバージョンのISOファイルをダウンロード&lt;&#x2F;li&gt;
+&lt;li&gt;Etcherを使ってブートUSBにする&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;自分はGUIを使う用途が無さそうだったのでUbuntu Serverを選んだ&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;ubuntunoinsutoru&quot;&gt;Ubuntuのインストール&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;作成したUSBを差して起動するとウィザードが出る。&lt;&#x2F;li&gt;
+&lt;li&gt;でない場合はBootメニューからUSBを指定する。&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;netutowakunojie-sok&quot;&gt;ネットワークの接続&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Netplanでネットワークの設定を追加する。&lt;&#x2F;li&gt;
+&lt;li&gt;Netplanの設定ファイルは&lt;code&gt;&#x2F;etc&#x2F;netplan&#x2F;&lt;&#x2F;code&gt;配下にある。&lt;&#x2F;li&gt;
+&lt;li&gt;ファイルの読み込み順で上書きされるので &lt;code&gt;&#x2F;etc&#x2F;netplan&#x2F;99_config.yaml&lt;&#x2F;code&gt; のように最後に読み込まれるファイル名で作成する。&lt;&#x2F;li&gt;
+&lt;li&gt;固定IPを使うかどうか、無線&#x2F;有線で設定内容が変わってくる。
+&lt;ul&gt;
+&lt;li&gt;詳しくはこちら: https:&#x2F;&#x2F;netplan.io&#x2F;examples&#x2F;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;wifidegu-ding-ipwoshi-uli&quot;&gt;WIFIで固定IPを使う例&lt;&#x2F;h4&gt;
+&lt;pre style=&quot;background-color:#eff1f5;color:#4f5b66;&quot;&gt;&lt;code&gt;&lt;span&gt;network:
+&lt;&#x2F;span&gt;&lt;span&gt;  version: 2
+&lt;&#x2F;span&gt;&lt;span&gt;  wifis:
+&lt;&#x2F;span&gt;&lt;span&gt;    wlo1:
+&lt;&#x2F;span&gt;&lt;span&gt;      dhcp4: no
+&lt;&#x2F;span&gt;&lt;span&gt;      dhcp6: no
+&lt;&#x2F;span&gt;&lt;span&gt;      access-points:
+&lt;&#x2F;span&gt;&lt;span&gt;        &amp;quot;{使いたいSSID}&amp;quot;:
+&lt;&#x2F;span&gt;&lt;span&gt;          password: &amp;quot;{パスワード}&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;      addresses: [{IPアドレス(CIDR表記のサブネットマスク)}]
+&lt;&#x2F;span&gt;&lt;span&gt;      gateway4: {デフォルトゲートウェイのIPアドレス}
+&lt;&#x2F;span&gt;&lt;span&gt;      nameservers:
+&lt;&#x2F;span&gt;&lt;span&gt;        addresses: [{DNSアドレス}]
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h4 id=&quot;you-xian-degu-ding-ipwoshi-uli&quot;&gt;有線で固定IPを使う例&lt;&#x2F;h4&gt;
+&lt;pre style=&quot;background-color:#eff1f5;color:#4f5b66;&quot;&gt;&lt;code&gt;&lt;span&gt;network:
+&lt;&#x2F;span&gt;&lt;span&gt;  version: 2
+&lt;&#x2F;span&gt;&lt;span&gt;  ethernets:
+&lt;&#x2F;span&gt;&lt;span&gt;    {インターフェース名}:
+&lt;&#x2F;span&gt;&lt;span&gt;      dhcp4: false
+&lt;&#x2F;span&gt;&lt;span&gt;      dhcp6: false
+&lt;&#x2F;span&gt;&lt;span&gt;      addresses: [{IPアドレス(CIDR表記のサブネットマスク)}]
+&lt;&#x2F;span&gt;&lt;span&gt;      gateway4: {デフォルトゲートウェイのIPアドレス}
+&lt;&#x2F;span&gt;&lt;span&gt;      nameservers:
+&lt;&#x2F;span&gt;&lt;span&gt;        addresses: [{DNSアドレス}]
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ul&gt;
+&lt;li&gt;変更後は &lt;code&gt;sudo netplan apply&lt;&#x2F;code&gt;で反映させる。&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;ssh&quot;&gt;SSH&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;他と同様にssh key を作成してconfigに追加する。&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre style=&quot;background-color:#eff1f5;color:#4f5b66;&quot;&gt;&lt;code&gt;&lt;span&gt;Host nuc
+&lt;&#x2F;span&gt;&lt;span&gt;  User {ユーザー}
+&lt;&#x2F;span&gt;&lt;span&gt;  HostName {NUCのIP}
+&lt;&#x2F;span&gt;&lt;span&gt;  IdentityFile {作った鍵の場所}
+&lt;&#x2F;span&gt;&lt;span&gt;  Port {開けてるSSHポート}
+&lt;&#x2F;span&gt;&lt;span&gt;  ServerAliveInterval 60
+&lt;&#x2F;span&gt;&lt;span&gt;  ServerAliveCountMax 5
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;vs-codenoshe-ding&quot;&gt;VS Codeの設定&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;VS CodeからSSH経由でNUCに接続する&lt;&#x2F;li&gt;
+&lt;li&gt;Extentionから&lt;code&gt;Remote - SSH&lt;&#x2F;code&gt;をインストールして&lt;code&gt;ssh config&lt;&#x2F;code&gt;のパスを指定する。
+&lt;ul&gt;
+&lt;li&gt;https:&#x2F;&#x2F;marketplace.visualstudio.com&#x2F;items?itemName=ms-vscode-remote.remote-ssh&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;dnsmasqnoshe-ding&quot;&gt;dnsmasqの設定&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;NUC上で立ち上げたWebアプリケーション等にMacからブラウザ表示等をするためdnsmasqを利用する。&lt;&#x2F;li&gt;
+&lt;li&gt;Macにdnsmasqをhomebrewでインストールする。&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;*.dev.me&lt;&#x2F;code&gt;の解決をNUCにする場合は以下。&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre style=&quot;background-color:#eff1f5;color:#4f5b66;&quot;&gt;&lt;code&gt;&lt;span&gt;echo &amp;#39;address=&#x2F;dev.me&#x2F;::1&amp;#39; &amp;gt;&amp;gt; $(brew --prefix)&#x2F;etc&#x2F;dnsmasq.conf
+&lt;&#x2F;span&gt;&lt;span&gt;echo &amp;#39;address=&#x2F;dev.me&#x2F;{NUCのIPアドレス}&amp;#39; &amp;gt;&amp;gt; $(brew --prefix)&#x2F;etc&#x2F;dnsmasq.conf
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;echo &amp;quot;nameserver ::1&amp;quot; &amp;gt;&amp;gt; &#x2F;etc&#x2F;resolver&#x2F;dev.me&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;echo &amp;quot;nameserver 127.0.0.1&amp;quot; &amp;gt;&amp;gt; &#x2F;etc&#x2F;resolver&#x2F;dev.me&amp;#39;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</content>
+	</entry>
+</feed>

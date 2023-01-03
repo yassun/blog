@@ -10,7 +10,7 @@
 		<title>Hello World</title>
 		<published>2021-05-01T11:11:00+00:00</published>
 		<updated>2021-05-01T11:11:00+00:00</updated>
-		<link href="https://blog.yasun.dev/hello-world/" type="text/html"/>
+		<link rel="alternate" href="https://blog.yasun.dev/hello-world/" type="text/html"/>
 		<id>https://blog.yasun.dev/hello-world/</id>
 		<content type="html">&lt;p&gt;This is the source code of the traditional &lt;em&gt;Hello World&lt;&#x2F;em&gt; program.&lt;&#x2F;p&gt;
 &lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#eff1f5;color:#4f5b66;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#a7adba;&quot;&gt;&#x2F;&#x2F; This is a comment, and is ignored by the compiler

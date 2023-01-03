@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+<title>開発用にNUCを買った | DC5</title>
+
+
+
+<meta property="og:title" content="開発用にNUCを買った">
+
+
+
+
+<meta property="og:locale" content="en_US">
+
+
+
+
+<link rel="canonical" href="https://blog.yasun.dev/setup-nuc/">
+<meta property="og:url" content="https://blog.yasun.dev/setup-nuc/">
+
+
+
+<meta property="og:site_name" content="DC5" />
+
+
+
+  <meta property="og:image" content="https://blog.yasun.dev/tale.png">
+  
+  
+
+
+
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2023-01-04T12:00:00+00:00">
+
+
+
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image"">
+  <meta property="twitter:image" content="https://blog.yasun.dev/tale.png">
+
+
+
+  <meta property="twitter:title" content="開発用にNUCを買った">
+
+
+
+
+
+  
+
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+<script type="application/ld+json">
+{
+  "author": {
+    "@type":"Person",
+	  "name":"",
+  },
+  "description": "",
+  "url": "https://blog.yasun.dev/setup-nuc/",
+  "@context":"https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "開発用にNUCを買った"
+  
+    
+    
+      "datePublished":"2023-01-04T12:00:00+00:00",
+    
+    "mainEntityOfPage":{
+      "@type":"WebPage",
+      "@id":"https://blog.yasun.dev/setup-nuc/"
+    },
+  
+}
+</script>
+
+  <link rel="stylesheet" href="https://blog.yasun.dev/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="https://blog.yasun.dev/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://blog.yasun.dev/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://blog.yasun.dev/assets/apple-touch-icon.png">
+
+  
+    <link type="application/atom+xml" rel="alternate" href="https://blog.yasun.dev/atom.xml" title="DC5" />
+  
+
+  
+
+  
+  
+</head>
+
+<body>
+  
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="https://blog.yasun.dev/">
+        <h2 class="nav-title">DC5</h2>
+      </a>
+      <ul>
+        
+          
+            <li><a href="https://blog.yasun.dev">Posts</a></li>
+          
+            <li><a href="https://blog.yasun.dev/tags">Tags</a></li>
+          
+            <li><a href="https://blog.yasun.dev/about">About</a></li>
+          
+        
+      </ul>
+    </div>
+  </nav>
+  
+
+  <main>
+    
+  <div class="post">
+  	<div class="post-info">
+  		
+  		<span>on&nbsp;</span><time datetime="2023-01-04T12:00:00+00:00">January  4, 2023</time>
+  	</div>
+  	<h1 class="post-title">開発用にNUCを買った</h1>
+  	<div class="post-line"></div>
+  	<p>去年からインテルのミニPC（NUC）を開発機としてメイン使いしている。</p>
+<img src="https://blog.yasun.dev/nuc/1.jpg" width="300">
+<p>Docker for Macの速度や、M1Macに変えてから諸々のDockerイメージのサポートが遅れがちだったりと不便を感じていた際に、
+同じ会社の人がやっていた構成が快適そうだったので参考にさせてもらった。</p>
+<p>基本はM1MacからSSH接続して開発している。</p>
+<p>最近はvimからVS Codeに移行したのでExtentionの<code>Remote - SSH</code>を使ってコードを編集し、
+Docker等で立ち上げたローカル環境に接続する場合はdnsmasqを使って名前解決をしている。</p>
+<h2 id="gou-ru-sitanuc">購入したNUC</h2>
+<ul>
+<li>サイズ、スペックを検討して「NUC11TNKi5」を購入した。</li>
+<li>NUC11TNKi5についてはこちらの記事でとてもわかりやすく解説されている。
+<ul>
+<li><a href="https://pc.watch.impress.co.jp/docs/column/hothot/1317129.html">手のひらサイズでリッチな超小型PC「NUC 11 Pro」。第11世代Core i5搭載モデルをレビュー</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="yong-yi-sitamono">用意したもの</h2>
+<h3 id="usbmemori">USBメモリ</h3>
+<ul>
+<li>ブート用に2G以上のUSBメモリが必要。</li>
+</ul>
+<h3 id="memori">メモリ</h3>
+<ul>
+<li>対応規格: DDR4 SO-DIMM×2(DDR4-3200対応、最大64GB)</li>
+<li>CrucialのノートPC用メモリを購入した
+<ul>
+<li>https://www.amazon.co.jp/dp/B07ZLC7VNH</li>
+</ul>
+</li>
+</ul>
+<h3 id="ssd">SSD</h3>
+<ul>
+<li>対応規格: M.2(2280、PCI Express 4.0 x4)、M.2(2242、SATA)</li>
+<li>NUC11TNKi5はM.2対応SSDのみを利用可能なので注意が必要
+<ul>
+<li>https://www.amazon.co.jp/dp/B08NDH38D7</li>
+</ul>
+</li>
+</ul>
+<h2 id="osnosetutoatupu">OSのセットアップ</h2>
+<h3 id="butousbnozuo-cheng">ブートUSBの作成</h3>
+<ul>
+<li>手順はubuntuの公式ページを参照
+<ul>
+<li>https://tutorials.ubuntu.com/tutorial/tutorial-create-a-usb-stick-on-macos#0</li>
+<li>基本的な手順は以下
+<ul>
+<li>USBメモリを初期化</li>
+<li>利用するバージョンのISOファイルをダウンロード</li>
+<li>Etcherを使ってブートUSBにする</li>
+</ul>
+</li>
+<li>自分はGUIを使う用途が無さそうだったのでUbuntu Serverを選んだ</li>
+</ul>
+</li>
+</ul>
+<h3 id="ubuntunoinsutoru">Ubuntuのインストール</h3>
+<ul>
+<li>作成したUSBを差して起動するとウィザードが出る。</li>
+<li>でない場合はBootメニューからUSBを指定する。</li>
+</ul>
+<h2 id="netutowakunojie-sok">ネットワークの接続</h2>
+<ul>
+<li>Netplanでネットワークの設定を追加する。</li>
+<li>Netplanの設定ファイルは<code>/etc/netplan/</code>配下にある。</li>
+<li>ファイルの読み込み順で上書きされるので <code>/etc/netplan/99_config.yaml</code> のように最後に読み込まれるファイル名で作成する。</li>
+<li>固定IPを使うかどうか、無線/有線で設定内容が変わってくる。
+<ul>
+<li>詳しくはこちら: https://netplan.io/examples/</li>
+</ul>
+</li>
+</ul>
+<h4 id="wifidegu-ding-ipwoshi-uli">WIFIで固定IPを使う例</h4>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>network:
+</span><span>  version: 2
+</span><span>  wifis:
+</span><span>    wlo1:
+</span><span>      dhcp4: no
+</span><span>      dhcp6: no
+</span><span>      access-points:
+</span><span>        &quot;{使いたいSSID}&quot;:
+</span><span>          password: &quot;{パスワード}&quot;
+</span><span>      addresses: [{IPアドレス(CIDR表記のサブネットマスク)}]
+</span><span>      gateway4: {デフォルトゲートウェイのIPアドレス}
+</span><span>      nameservers:
+</span><span>        addresses: [{DNSアドレス}]
+</span></code></pre>
+<h4 id="you-xian-degu-ding-ipwoshi-uli">有線で固定IPを使う例</h4>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>network:
+</span><span>  version: 2
+</span><span>  ethernets:
+</span><span>    {インターフェース名}:
+</span><span>      dhcp4: false
+</span><span>      dhcp6: false
+</span><span>      addresses: [{IPアドレス(CIDR表記のサブネットマスク)}]
+</span><span>      gateway4: {デフォルトゲートウェイのIPアドレス}
+</span><span>      nameservers:
+</span><span>        addresses: [{DNSアドレス}]
+</span></code></pre>
+<ul>
+<li>変更後は <code>sudo netplan apply</code>で反映させる。</li>
+</ul>
+<h2 id="ssh">SSH</h2>
+<ul>
+<li>他と同様にssh key を作成してconfigに追加する。</li>
+</ul>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>Host nuc
+</span><span>  User {ユーザー}
+</span><span>  HostName {NUCのIP}
+</span><span>  IdentityFile {作った鍵の場所}
+</span><span>  Port {開けてるSSHポート}
+</span><span>  ServerAliveInterval 60
+</span><span>  ServerAliveCountMax 5
+</span></code></pre>
+<h2 id="vs-codenoshe-ding">VS Codeの設定</h2>
+<ul>
+<li>VS CodeからSSH経由でNUCに接続する</li>
+<li>Extentionから<code>Remote - SSH</code>をインストールして<code>ssh config</code>のパスを指定する。
+<ul>
+<li>https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh</li>
+</ul>
+</li>
+</ul>
+<h2 id="dnsmasqnoshe-ding">dnsmasqの設定</h2>
+<ul>
+<li>NUC上で立ち上げたWebアプリケーション等にMacからブラウザ表示等をするためdnsmasqを利用する。</li>
+<li>Macにdnsmasqをhomebrewでインストールする。</li>
+<li><code>*.dev.me</code>の解決をNUCにする場合は以下。</li>
+</ul>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>echo &#39;address=/dev.me/::1&#39; &gt;&gt; $(brew --prefix)/etc/dnsmasq.conf
+</span><span>echo &#39;address=/dev.me/{NUCのIPアドレス}&#39; &gt;&gt; $(brew --prefix)/etc/dnsmasq.conf
+</span><span>
+</span><span>echo &quot;nameserver ::1&quot; &gt;&gt; /etc/resolver/dev.me&#39;
+</span><span>echo &quot;nameserver 127.0.0.1&quot; &gt;&gt; /etc/resolver/dev.me&#39;
+</span></code></pre>
+
+  </div>
+
+	
+
+  <div class="pagination">
+  	
+		<a href="#" class="top">Top</a>
+		
+  </div>
+
+  </main>
+
+  
+  <footer>
+    <span>&copy; <time datetime="2023-01-04T00:41:45.344645+09:00">2021-2023</time> . Made with <a href="https://www.getzola.org">Zola</a> with <a href="https://github.com/aaranxu/tale-zola">Tala-Zola</a> theme.</span>
+  </footer>
+  
+</body>
+</html>

@@ -18,7 +18,17 @@
         <loc>https://blog.yasun.dev/page/1/</loc>
     </url>
     <url>
+        <loc>https://blog.yasun.dev/setup-nuc/</loc>
+        <lastmod>2023-01-04T12:00:00+00:00</lastmod>
+    </url>
+    <url>
         <loc>https://blog.yasun.dev/tags/</loc>
+    </url>
+    <url>
+        <loc>https://blog.yasun.dev/tags/dev/</loc>
+    </url>
+    <url>
+        <loc>https://blog.yasun.dev/tags/nuc/</loc>
     </url>
     <url>
         <loc>https://blog.yasun.dev/tags/rust/</loc>
